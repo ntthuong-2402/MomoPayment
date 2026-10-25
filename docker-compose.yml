@@ -1,0 +1,199 @@
+services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: momo-sqlserver
+    environment:
+      - ACCEPT_EULA=Y
+      - MSSQL_SA_PASSWORD=MomoSecureP@ssw0rd!
+      - MSSQL_PID=Developer
+    ports:
+      - "1433:1433"
+    volumes:
+      - sqlserver_data:/var/opt/mssql
+      - ./docker/sqlserver/init-db.sql:/docker-entrypoint-initdb.d/init-db.sql
+    healthcheck:
+      test: ["CMD-SHELL", "/opt/mssql-tools18/bin/sqlcmd -S localhost -U sa -P 'MomoSecureP@ssw0rd!' -C -Q 'SELECT 1' || /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P 'MomoSecureP@ssw0rd!' -Q 'SELECT 1'"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 15s
+    networks:
+      - momo-network
+    restart: unless-stopped
+
+  redis:
+    image: redis:7-alpine
+    container_name: momo-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+    networks:
+      - momo-network
+    restart: unless-stopped
+
+  rabbitmq:
+    image: rabbitmq:3-management-alpine
+    container_name: momo-rabbitmq
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    environment:
+      - RABBITMQ_DEFAULT_USER=guest
+      - RABBITMQ_DEFAULT_PASS=guest
+    volumes:
+      - rabbitmq_data:/var/lib/rabbitmq
+    healthcheck:
+      test: ["CMD", "rabbitmq-diagnostics", "-q", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 15s
+    networks:
+      - momo-network
+    restart: unless-stopped
+
+  identity-service:
+    build:
+      context: .
+      dockerfile: src/Services/Identity/Identity.API/Dockerfile
+    container_name: momo-identity-service
+    ports:
+      - "5001:5001"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:5001
+      - ConnectionStrings__DefaultConnection=Server=sqlserver,1433;Database=Momo_IdentityDb;User Id=sa;Password=MomoSecureP@ssw0rd!;TrustServerCertificate=True;MultipleActiveResultSets=True;
+      - Redis__ConnectionString=redis:6379
+      - Redis__InstanceName=Momo_Identity_
+      - RabbitMq__HostName=rabbitmq
+      - RabbitMq__Port=5672
+    depends_on:
+      - sqlserver
+      - redis
+      - rabbitmq
+    networks:
+      - momo-network
+    restart: unless-stopped
+
+  wallet-service:
+    build:
+      context: .
+      dockerfile: src/Services/Wallet/Wallet.API/Dockerfile
+    container_name: momo-wallet-service
+    ports:
+      - "5002:5002"
+      - "50052:50052"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - Kestrel__Endpoints__Http__Url=http://0.0.0.0:5002
+      - Kestrel__Endpoints__Http__Protocols=Http1
+      - Kestrel__Endpoints__gRPC__Url=http://0.0.0.0:50052
+      - Kestrel__Endpoints__gRPC__Protocols=Http2
+      - ConnectionStrings__DefaultConnection=Server=sqlserver,1433;Database=Momo_WalletDb;User Id=sa;Password=MomoSecureP@ssw0rd!;TrustServerCertificate=True;MultipleActiveResultSets=True;
+      - Redis__ConnectionString=redis:6379
+      - Redis__InstanceName=Momo_Wallet_
+      - RabbitMq__HostName=rabbitmq
+      - RabbitMq__Port=5672
+    depends_on:
+      - sqlserver
+      - redis
+      - rabbitmq
+    networks:
+      - momo-network
+    restart: unless-stopped
+
+  transaction-service:
+    build:
+      context: .
+      dockerfile: src/Services/Transaction/Transaction.API/Dockerfile
+    container_name: momo-transaction-service
+    ports:
+      - "5003:5003"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:5003
+      - ConnectionStrings__DefaultConnection=Server=sqlserver,1433;Database=Momo_TransactionDb;User Id=sa;Password=MomoSecureP@ssw0rd!;TrustServerCertificate=True;MultipleActiveResultSets=True;
+      - Redis__ConnectionString=redis:6379
+      - Redis__InstanceName=Momo_Txn_
+      - RabbitMq__HostName=rabbitmq
+      - RabbitMq__Port=5672
+      - GrpcClients__WalletServiceUrl=http://wallet-service:50052
+    depends_on:
+      - sqlserver
+      - redis
+      - rabbitmq
+      - wallet-service
+    networks:
+      - momo-network
+    restart: unless-stopped
+
+  notification-service:
+    build:
+      context: .
+      dockerfile: src/Services/Notification/Notification.API/Dockerfile
+    container_name: momo-notification-service
+    ports:
+      - "5004:5004"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:5004
+      - ConnectionStrings__DefaultConnection=Server=sqlserver,1433;Database=Momo_NotificationDb;User Id=sa;Password=MomoSecureP@ssw0rd!;TrustServerCertificate=True;MultipleActiveResultSets=True;
+      - RabbitMq__HostName=rabbitmq
+      - RabbitMq__Port=5672
+    depends_on:
+      - sqlserver
+      - rabbitmq
+    networks:
+      - momo-network
+    restart: unless-stopped
+
+  api-gateway:
+    build:
+      context: .
+      dockerfile: src/ApiGateways/ApiGateway/Dockerfile
+    container_name: momo-api-gateway
+    ports:
+      - "5000:5000"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:5000
+      - ReverseProxy__Clusters__identity-cluster__Destinations__identity-service__Address=http://identity-service:5001
+      - ReverseProxy__Clusters__wallet-cluster__Destinations__wallet-service__Address=http://wallet-service:5002
+      - ReverseProxy__Clusters__transaction-cluster__Destinations__transaction-service__Address=http://transaction-service:5003
+      - ReverseProxy__Clusters__notification-cluster__Destinations__notification-service__Address=http://notification-service:5004
+    depends_on:
+      - identity-service
+      - wallet-service
+      - transaction-service
+      - notification-service
+    networks:
+      - momo-network
+    restart: unless-stopped
+
+  momo-web:
+    build:
+      context: src/Web/momo-web
+      dockerfile: Dockerfile
+    container_name: momo-web-ui
+    ports:
+      - "3000:80"
+    depends_on:
+      - api-gateway
+    networks:
+      - momo-network
+    restart: unless-stopped
+
+networks:
+  momo-network:
+    driver: bridge
+
+volumes:
+  sqlserver_data:
+  redis_data:
+  rabbitmq_data:

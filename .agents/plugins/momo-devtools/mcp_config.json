@@ -1,0 +1,18 @@
+{
+  "mcpServers": {
+    "sqlserver": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-mssql"],
+      "env": {
+        "MSSQL_CONNECTION_STRING": "Server=localhost,1433;Database=Momo_TransactionDb;User Id=sa;Password=MomoSecureP@ssw0rd!;TrustServerCertificate=True;"
+      }
+    },
+    "redis": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-redis"],
+      "env": {
+        "REDIS_URL": "redis://localhost:6379"
+      }
+    }
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "name": "momo-devtools",
+  "version": "1.0.0",
+  "description": "Developer tools, MCP configurations, and hooks for the MomoPayment microservices ecosystem"
+}

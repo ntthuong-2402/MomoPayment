@@ -1,0 +1,12 @@
+E:\Project\MomoPayment\src\BuildingBlocks\MomoPayment.Common\bin\Debug\net10.0\MomoPayment.Common.deps.json
+E:\Project\MomoPayment\src\BuildingBlocks\MomoPayment.Common\bin\Debug\net10.0\MomoPayment.Common.dll
+E:\Project\MomoPayment\src\BuildingBlocks\MomoPayment.Common\bin\Debug\net10.0\MomoPayment.Common.pdb
+E:\Project\MomoPayment\src\BuildingBlocks\MomoPayment.Common\obj\Debug\net10.0\MomoPayment.Common.csproj.AssemblyReference.cache
+E:\Project\MomoPayment\src\BuildingBlocks\MomoPayment.Common\obj\Debug\net10.0\MomoPayment.Common.GeneratedMSBuildEditorConfig.editorconfig
+E:\Project\MomoPayment\src\BuildingBlocks\MomoPayment.Common\obj\Debug\net10.0\MomoPayment.Common.AssemblyInfoInputs.cache
+E:\Project\MomoPayment\src\BuildingBlocks\MomoPayment.Common\obj\Debug\net10.0\MomoPayment.Common.AssemblyInfo.cs
+E:\Project\MomoPayment\src\BuildingBlocks\MomoPayment.Common\obj\Debug\net10.0\MomoPayment.Common.csproj.CoreCompileInputs.cache
+E:\Project\MomoPayment\src\BuildingBlocks\MomoPayment.Common\obj\Debug\net10.0\MomoPayment.Common.dll
+E:\Project\MomoPayment\src\BuildingBlocks\MomoPayment.Common\obj\Debug\net10.0\refint\MomoPayment.Common.dll
+E:\Project\MomoPayment\src\BuildingBlocks\MomoPayment.Common\obj\Debug\net10.0\MomoPayment.Common.pdb
+E:\Project\MomoPayment\src\BuildingBlocks\MomoPayment.Common\obj\Debug\net10.0\ref\MomoPayment.Common.dll

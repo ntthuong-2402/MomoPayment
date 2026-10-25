@@ -1,0 +1,29 @@
+{
+  "version": 2,
+  "dgSpecHash": "FkJv/sKxXUY=",
+  "success": true,
+  "projectFilePath": "E:\\Project\\MomoPayment\\src\\BuildingBlocks\\MomoPayment.Caching\\MomoPayment.Caching.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\10.0.4\\microsoft.aspnetcore.authentication.jwtbearer.10.0.4.nupkg.sha512",
+    "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\10.0.0\\microsoft.extensions.caching.abstractions.10.0.0.nupkg.sha512",
+    "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.extensions.caching.stackexchangeredis\\10.0.0\\microsoft.extensions.caching.stackexchangeredis.10.0.0.nupkg.sha512",
+    "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.extensions.configuration\\10.0.5\\microsoft.extensions.configuration.10.0.5.nupkg.sha512",
+    "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\10.0.5\\microsoft.extensions.configuration.abstractions.10.0.5.nupkg.sha512",
+    "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.extensions.configuration.binder\\10.0.5\\microsoft.extensions.configuration.binder.10.0.5.nupkg.sha512",
+    "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\10.0.5\\microsoft.extensions.dependencyinjection.abstractions.10.0.5.nupkg.sha512",
+    "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\10.0.0\\microsoft.extensions.logging.abstractions.10.0.0.nupkg.sha512",
+    "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.extensions.options\\10.0.5\\microsoft.extensions.options.10.0.5.nupkg.sha512",
+    "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.extensions.options.configurationextensions\\10.0.5\\microsoft.extensions.options.configurationextensions.10.0.5.nupkg.sha512",
+    "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.extensions.primitives\\10.0.5\\microsoft.extensions.primitives.10.0.5.nupkg.sha512",
+    "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.identitymodel.abstractions\\8.3.1\\microsoft.identitymodel.abstractions.8.3.1.nupkg.sha512",
+    "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\8.3.1\\microsoft.identitymodel.jsonwebtokens.8.3.1.nupkg.sha512",
+    "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.identitymodel.logging\\8.3.1\\microsoft.identitymodel.logging.8.3.1.nupkg.sha512",
+    "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.identitymodel.protocols\\8.0.1\\microsoft.identitymodel.protocols.8.0.1.nupkg.sha512",
+    "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.identitymodel.protocols.openidconnect\\8.0.1\\microsoft.identitymodel.protocols.openidconnect.8.0.1.nupkg.sha512",
+    "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.identitymodel.tokens\\8.3.1\\microsoft.identitymodel.tokens.8.3.1.nupkg.sha512",
+    "C:\\Users\\ADMIN\\.nuget\\packages\\pipelines.sockets.unofficial\\2.2.8\\pipelines.sockets.unofficial.2.2.8.nupkg.sha512",
+    "C:\\Users\\ADMIN\\.nuget\\packages\\stackexchange.redis\\2.8.24\\stackexchange.redis.2.8.24.nupkg.sha512",
+    "C:\\Users\\ADMIN\\.nuget\\packages\\system.identitymodel.tokens.jwt\\8.3.1\\system.identitymodel.tokens.jwt.8.3.1.nupkg.sha512"
+  ],
+  "logs": []
+}

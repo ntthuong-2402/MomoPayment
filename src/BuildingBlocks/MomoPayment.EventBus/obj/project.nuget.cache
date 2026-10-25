@@ -1,0 +1,26 @@
+{
+  "version": 2,
+  "dgSpecHash": "dmuTaahpAoE=",
+  "success": true,
+  "projectFilePath": "E:\\Project\\MomoPayment\\src\\BuildingBlocks\\MomoPayment.EventBus\\MomoPayment.EventBus.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\10.0.4\\microsoft.aspnetcore.authentication.jwtbearer.10.0.4.nupkg.sha512",
+    "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.extensions.configuration\\10.0.5\\microsoft.extensions.configuration.10.0.5.nupkg.sha512",
+    "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\10.0.5\\microsoft.extensions.configuration.abstractions.10.0.5.nupkg.sha512",
+    "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.extensions.configuration.binder\\10.0.5\\microsoft.extensions.configuration.binder.10.0.5.nupkg.sha512",
+    "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\10.0.5\\microsoft.extensions.dependencyinjection.abstractions.10.0.5.nupkg.sha512",
+    "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\9.0.0\\microsoft.extensions.logging.abstractions.9.0.0.nupkg.sha512",
+    "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.extensions.options\\10.0.5\\microsoft.extensions.options.10.0.5.nupkg.sha512",
+    "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.extensions.options.configurationextensions\\10.0.5\\microsoft.extensions.options.configurationextensions.10.0.5.nupkg.sha512",
+    "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.extensions.primitives\\10.0.5\\microsoft.extensions.primitives.10.0.5.nupkg.sha512",
+    "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.identitymodel.abstractions\\8.3.1\\microsoft.identitymodel.abstractions.8.3.1.nupkg.sha512",
+    "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\8.3.1\\microsoft.identitymodel.jsonwebtokens.8.3.1.nupkg.sha512",
+    "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.identitymodel.logging\\8.3.1\\microsoft.identitymodel.logging.8.3.1.nupkg.sha512",
+    "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.identitymodel.protocols\\8.0.1\\microsoft.identitymodel.protocols.8.0.1.nupkg.sha512",
+    "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.identitymodel.protocols.openidconnect\\8.0.1\\microsoft.identitymodel.protocols.openidconnect.8.0.1.nupkg.sha512",
+    "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.identitymodel.tokens\\8.3.1\\microsoft.identitymodel.tokens.8.3.1.nupkg.sha512",
+    "C:\\Users\\ADMIN\\.nuget\\packages\\rabbitmq.client\\6.8.1\\rabbitmq.client.6.8.1.nupkg.sha512",
+    "C:\\Users\\ADMIN\\.nuget\\packages\\system.identitymodel.tokens.jwt\\8.3.1\\system.identitymodel.tokens.jwt.8.3.1.nupkg.sha512"
+  ],
+  "logs": []
+}
