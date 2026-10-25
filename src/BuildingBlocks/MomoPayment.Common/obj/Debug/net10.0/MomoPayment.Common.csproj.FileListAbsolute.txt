@@ -10,3 +10,4 @@ E:\Project\MomoPayment\src\BuildingBlocks\MomoPayment.Common\obj\Debug\net10.0\M
 E:\Project\MomoPayment\src\BuildingBlocks\MomoPayment.Common\obj\Debug\net10.0\refint\MomoPayment.Common.dll
 E:\Project\MomoPayment\src\BuildingBlocks\MomoPayment.Common\obj\Debug\net10.0\MomoPayment.Common.pdb
 E:\Project\MomoPayment\src\BuildingBlocks\MomoPayment.Common\obj\Debug\net10.0\ref\MomoPayment.Common.dll
+E:\Project\MomoPayment\src\BuildingBlocks\MomoPayment.Common\obj\Debug\net10.0\MomoPayment.Common.sourcelink.json

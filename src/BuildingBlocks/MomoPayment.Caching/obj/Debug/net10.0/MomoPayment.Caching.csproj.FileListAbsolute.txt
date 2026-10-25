@@ -13,3 +13,4 @@ E:\Project\MomoPayment\src\BuildingBlocks\MomoPayment.Caching\obj\Debug\net10.0\
 E:\Project\MomoPayment\src\BuildingBlocks\MomoPayment.Caching\obj\Debug\net10.0\refint\MomoPayment.Caching.dll
 E:\Project\MomoPayment\src\BuildingBlocks\MomoPayment.Caching\obj\Debug\net10.0\MomoPayment.Caching.pdb
 E:\Project\MomoPayment\src\BuildingBlocks\MomoPayment.Caching\obj\Debug\net10.0\ref\MomoPayment.Caching.dll
+E:\Project\MomoPayment\src\BuildingBlocks\MomoPayment.Caching\obj\Debug\net10.0\MomoPayment.Caching.sourcelink.json

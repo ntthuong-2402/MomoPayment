@@ -177,3 +177,4 @@ E:\Project\MomoPayment\src\Services\Wallet\Wallet.API\obj\Debug\net10.0\refint\W
 E:\Project\MomoPayment\src\Services\Wallet\Wallet.API\obj\Debug\net10.0\Wallet.API.pdb
 E:\Project\MomoPayment\src\Services\Wallet\Wallet.API\obj\Debug\net10.0\Wallet.API.genruntimeconfig.cache
 E:\Project\MomoPayment\src\Services\Wallet\Wallet.API\obj\Debug\net10.0\ref\Wallet.API.dll
+E:\Project\MomoPayment\src\Services\Wallet\Wallet.API\obj\Debug\net10.0\Wallet.API.sourcelink.json

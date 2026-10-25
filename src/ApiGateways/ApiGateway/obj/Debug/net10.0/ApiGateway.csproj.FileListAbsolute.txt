@@ -44,3 +44,4 @@ E:\Project\MomoPayment\src\ApiGateways\ApiGateway\obj\Debug\net10.0\refint\ApiGa
 E:\Project\MomoPayment\src\ApiGateways\ApiGateway\obj\Debug\net10.0\ApiGateway.pdb
 E:\Project\MomoPayment\src\ApiGateways\ApiGateway\obj\Debug\net10.0\ApiGateway.genruntimeconfig.cache
 E:\Project\MomoPayment\src\ApiGateways\ApiGateway\obj\Debug\net10.0\ref\ApiGateway.dll
+E:\Project\MomoPayment\src\ApiGateways\ApiGateway\obj\Debug\net10.0\ApiGateway.sourcelink.json

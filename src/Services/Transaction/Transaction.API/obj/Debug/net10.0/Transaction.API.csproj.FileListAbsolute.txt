@@ -177,3 +177,4 @@ E:\Project\MomoPayment\src\Services\Transaction\Transaction.API\obj\Debug\net10.
 E:\Project\MomoPayment\src\Services\Transaction\Transaction.API\obj\Debug\net10.0\Transaction.API.pdb
 E:\Project\MomoPayment\src\Services\Transaction\Transaction.API\obj\Debug\net10.0\Transaction.API.genruntimeconfig.cache
 E:\Project\MomoPayment\src\Services\Transaction\Transaction.API\obj\Debug\net10.0\ref\Transaction.API.dll
+E:\Project\MomoPayment\src\Services\Transaction\Transaction.API\obj\Debug\net10.0\Transaction.API.sourcelink.json

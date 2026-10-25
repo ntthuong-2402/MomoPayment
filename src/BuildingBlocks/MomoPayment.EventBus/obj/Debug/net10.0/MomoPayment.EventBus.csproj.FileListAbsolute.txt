@@ -13,3 +13,4 @@ E:\Project\MomoPayment\src\BuildingBlocks\MomoPayment.EventBus\obj\Debug\net10.0
 E:\Project\MomoPayment\src\BuildingBlocks\MomoPayment.EventBus\obj\Debug\net10.0\refint\MomoPayment.EventBus.dll
 E:\Project\MomoPayment\src\BuildingBlocks\MomoPayment.EventBus\obj\Debug\net10.0\MomoPayment.EventBus.pdb
 E:\Project\MomoPayment\src\BuildingBlocks\MomoPayment.EventBus\obj\Debug\net10.0\ref\MomoPayment.EventBus.dll
+E:\Project\MomoPayment\src\BuildingBlocks\MomoPayment.EventBus\obj\Debug\net10.0\MomoPayment.EventBus.sourcelink.json
